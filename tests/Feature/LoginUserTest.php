@@ -28,6 +28,6 @@ class LoginUserTest extends TestCase
 
         // expect
         $response->assertStatus(200);
-        $response->assertSee('token');
+        $response->assertSee('auth-token');
     }
 }
