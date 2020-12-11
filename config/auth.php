@@ -45,6 +45,8 @@ return [
             'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
+            'input_key' => 'auth-token',   // The input name to pass through
+            'storage_key' => 'api_token', // The column name to store in database
         ],
     ],
 
