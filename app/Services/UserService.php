@@ -26,6 +26,7 @@ class UserService implements IUserService
             $user->gender = $userDTO->gender;
             $user->birthdate = $userDTO->birthdate;
             $user->email = $userDTO->email;
+            $user->password = $userDTO->password;
             $user->save();
 
             $user->addMedia($userDTO->avatar)->toMediaCollection('avatar');

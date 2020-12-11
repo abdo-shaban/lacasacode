@@ -32,6 +32,7 @@ class StoreUserRequest extends FormRequest
             'birthdate'    => ['required', 'date', 'date_format:Y-m-d', 'before_or_equal:today'],
             'avatar'       => ['required', 'mimes:jpg,jpeg,png'],
             'email'        => ['nullable', 'email', 'unique:users,email'],
+            'password'     => ['nullable', 'max:255'],
         ];
     }
 
@@ -43,8 +44,8 @@ class StoreUserRequest extends FormRequest
             'unique'                    => 'taken',
             'required'                  => 'blank',
             'email'                     => 'invalid',
-            'min'                       =>  'too_short :min',
-            'max'                       =>  'too_long :max',
+            'min'                       => 'too_short :min',
+            'max'                       => 'too_long :max',
             'birthdate.before_or_equal' => 'in_the_future',
         ];
     }

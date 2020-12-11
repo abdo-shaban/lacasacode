@@ -18,4 +18,5 @@ class UserDTO  extends DataTransferObject
     public UploadedFile $avatar;
 
     public ?string $email;
+    public ?string $password;
 }
